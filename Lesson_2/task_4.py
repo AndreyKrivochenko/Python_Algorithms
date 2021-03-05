@@ -9,7 +9,7 @@ def func(number, count, col):
     if count == col:
         return number
     else:
-        return number + func(number / 2, count + 1, col)
+        return number + func(-(number / 2), count + 1, col)
 
 
 n = int(input('Введите количество элементов: '))
