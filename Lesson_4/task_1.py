@@ -80,6 +80,8 @@ print(timeit.timeit('frequency(a3)', number=100, globals=globals()))    # 0.4110
 print(timeit.timeit('frequency(a4)', number=100, globals=globals()))    # 0.6411735000000001
 print(timeit.timeit('frequency(a5)', number=100, globals=globals()))    # 0.8697240000000002
 
+# cProfile в первом варианте запускал на а5 массиве, иначе очень долго, не дождаться... В двух других проверках
+# запускал на значительно увеличенном а6 массиве, чтобы избежать нулей.
 cProfile.run('frequency(a5)')
 """         2205 function calls in 0.010 seconds
 
